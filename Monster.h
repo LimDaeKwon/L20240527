@@ -1,12 +1,19 @@
 #pragma once
-class Monster
+class FMonster
 {
 public:
-	int HP;
-	int Damage;
-public:
+	FMonster();
+	~FMonster();
+
 	void Move();
 	void Attack();
+	void Pickup();
+	int GetGold();
+	void SetGold(int NewGold);
+
+protected:
+	int HP;
+	int Gold;
+
 	void Die();
 };
-

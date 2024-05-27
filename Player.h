@@ -1,15 +1,24 @@
 #pragma once
-#include "Monster.h"
-class Player
+class FPlayer
 {
-public:
+public: //
+	FPlayer();
+	~FPlayer();
+
+	//interface
+	void Move();
+	void Attack();
+	void Pickup();
+
+	//accessor
+	int GetGold();
+	//mutator
+	void SetGold(int NewGold);
+
+
+private:
 	int HP;
 	int Gold;
-	int Damage;
 
-public:
-	void Move();
-	void Attack(Monster *MyMonster);
-	void GetGold();
+	void Die();
 };
-

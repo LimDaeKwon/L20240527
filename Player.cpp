@@ -1,23 +1,43 @@
 #include "Player.h"
-
-void Player::Move()
+#include<iostream>
+FPlayer::FPlayer() : HP(0), Gold(0)
 {
-
+	std::cout << "FPlayer Constructor" << std::endl;
+	//HP = 0;
+	//Gold = 0;
 }
 
-void Player::Attack(Monster* MyMonster)
+FPlayer::~FPlayer()
 {
-	MyMonster->HP -= Damage;
-	if (MyMonster->HP <= 0)
+	std::cout << "FPlayer Destructor" << std::endl;
+}
+
+void FPlayer::Move()
+{
+	HP = 0;
+}
+
+void FPlayer::Die()
+{
+}
+
+void FPlayer::Attack()
+{
+}
+
+void FPlayer::Pickup()
+{
+}
+
+int FPlayer::GetGold()
+{
+	return Gold;
+}
+
+void FPlayer::SetGold(int NewGold)
+{
+	if (NewGold >= 0)
 	{
-		MyMonster->Die();
-		GetGold();
+		Gold = NewGold;
 	}
-
-}
-
-
-void Player::GetGold()
-{
-	Gold += 10;
 }

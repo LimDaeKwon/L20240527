@@ -1,6 +1,12 @@
 #include "World.h"
+#include <iostream>
 
-void World::StartGame()
+FWorld::FWorld()
 {
+	std::cout << "FWorld " << std::endl;
+}
 
+FWorld::~FWorld()
+{
+	std::cout << "FWorld" << std::endl;
 }
